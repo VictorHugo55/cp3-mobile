@@ -4,14 +4,14 @@ const desenvolvedores = [
   {
     nome: 'Victor Hugo Carvalho Pereira',
     rm: 'RM: 558550',
-    foto: 'https://i.pravatar.cc/150?img=12', // Exemplo de avatar genérico
+    foto: require('../assets/victor.jpg'), // Exemplo de avatar genérico
     email: 'victor@example.com',
     linkedin: 'https://www.linkedin.com/in/victorhugocarvalho',
   },
   {
     nome: 'Gabriel Gomes Mancera ',
     rm: "RM: 555427",
-    foto: 'https://i.pravatar.cc/150?img=5',
+    foto: require('../assets/gabriel.jpeg'),
     email: 'gabriel@example.com',
     linkedin: 'https://www.linkedin.com/in/gabriel',
   },
@@ -23,7 +23,7 @@ export default function Sobre() {
       <Text style={styles.titulo}>Desenvolvedores</Text>
       {desenvolvedores.map((dev, i) => (
         <View key={i} style={styles.card}>
-          <Image source={{ uri: dev.foto }} style={styles.foto} />
+          <Image source={ dev.foto } style={styles.foto} />
           <View style={styles.info}>
             <Text style={styles.nome}>{dev.nome}</Text>
             {dev.rm && <Text style={styles.rm}>{dev.rm}</Text>}
